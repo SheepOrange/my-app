@@ -3,9 +3,11 @@ import React, { Component} from 'react';
 import {CardList} from './components/card-list/card-list.component';
 import {SearchBox} from './components/search-box/search-box.component';
 
+import './App.css';
+
 class App extends Component {
-  constructor(props){
-    super(props);
+  constructor(){
+    super();
     this.state = {
         monsters: [],
         searchField: ''
@@ -30,6 +32,7 @@ class App extends Component {
     );
     return (
       <div className="App">
+        <h1> Monsters Rolodex</h1>
         <SearchBox
           placeholder = "Search Monsters"
           handleChange = {this.handleChange}
